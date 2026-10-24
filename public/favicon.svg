@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#070709"/>
+  <path d="M32 6L54 18.7V44.3L32 57L10 44.3V18.7L32 6Z" stroke="#27272A" stroke-width="2" fill="#111216"/>
+  <!-- Geometric Hornet Wings & Stinger -->
+  <path d="M32 13L47 22L38 29L32 25L26 29L17 22L32 13Z" fill="#F5B700"/>
+  <path d="M22 31L32 27L42 31L39 39L32 42L25 39L22 31Z" fill="#FAFAFA"/>
+  <path d="M26 42L32 45L38 42L32 53L26 42Z" fill="#F5B700"/>
+  <!-- Digital Pixel Accents -->
+  <rect x="13" y="29" width="4" height="4" fill="#F5B700"/>
+  <rect x="47" y="29" width="4" height="4" fill="#F5B700"/>
+</svg>

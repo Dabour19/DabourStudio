@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" fill="none">
+  <rect width="1200" height="750" fill="#07080B"/>
+  <!-- Isometric Hexagonal Node Architecture -->
+  <g transform="translate(600, 375)">
+    <!-- Connection Lines -->
+    <line x1="0" y1="0" x2="-240" y2="-130" stroke="#F5B700" stroke-width="2.5" stroke-dasharray="6 6"/>
+    <line x1="0" y1="0" x2="240" y2="-130" stroke="#F5B700" stroke-width="2.5" stroke-dasharray="6 6"/>
+    <line x1="0" y1="0" x2="-240" y2="130" stroke="#52525B" stroke-width="2"/>
+    <line x1="0" y1="0" x2="240" y2="130" stroke="#52525B" stroke-width="2"/>
+    <line x1="0" y1="0" x2="0" y2="-220" stroke="#F5B700" stroke-width="2.5"/>
+    <line x1="0" y1="0" x2="0" y2="220" stroke="#FAFAFA" stroke-width="2" stroke-opacity="0.5"/>
+
+    <!-- Outer Nodes -->
+    <g transform="translate(-240, -130)">
+      <polygon points="0,-55 48,-27 48,27 0,55 -48,27 -48,-27" fill="#12141C" stroke="#F5B700" stroke-width="2"/>
+      <circle cx="0" cy="0" r="10" fill="#F5B700"/>
+    </g>
+    <g transform="translate(240, -130)">
+      <polygon points="0,-55 48,-27 48,27 0,55 -48,27 -48,-27" fill="#12141C" stroke="#F5B700" stroke-width="2"/>
+      <circle cx="0" cy="0" r="10" fill="#F5B700"/>
+    </g>
+    <g transform="translate(-240, 130)">
+      <polygon points="0,-55 48,-27 48,27 0,55 -48,27 -48,-27" fill="#12141C" stroke="#3F3F46" stroke-width="2"/>
+      <rect x="-10" y="-10" width="20" height="20" fill="#FAFAFA"/>
+    </g>
+    <g transform="translate(240, 130)">
+      <polygon points="0,-55 48,-27 48,27 0,55 -48,27 -48,-27" fill="#12141C" stroke="#3F3F46" stroke-width="2"/>
+      <rect x="-10" y="-10" width="20" height="20" fill="#FAFAFA"/>
+    </g>
+
+    <!-- Center Core SDK Module -->
+    <polygon points="0,-115 100,-57 100,57 0,115 -100,57 -100,-57" fill="#151821" stroke="#F5B700" stroke-width="3"/>
+    <polygon points="0,-80 70,-40 70,40 0,80 -70,40 -70,-40" fill="#090A0F" stroke="#27272A" stroke-width="1.5"/>
+    <text x="-48" y="8" fill="#F5B700" font-family="monospace" font-weight="700" font-size="26">HEX·SDK</text>
+  </g>
+  <text x="90" y="665" fill="#A1A1AA" font-family="monospace" font-size="15" letter-spacing="2">C# · UNITY EDITOR TOOLKIT · SHADER PIPELINE</text>
+</svg>

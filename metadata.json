@@ -1,0 +1,6 @@
+{
+  "name": "DabourStudio | دبور ستيديو",
+  "description": "استوديو تقني وإبداعي متخصص في تطوير ألعاب الفيديو بـ Unity 6، تطبيقات Android، المواقع، والبرمجيات المخصصة.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

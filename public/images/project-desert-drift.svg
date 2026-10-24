@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" fill="none">
+  <defs>
+    <linearGradient id="dunes" x1="0" y1="0" x2="1200" y2="750" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#09090D"/>
+      <stop offset="60%" stop-color="#171411"/>
+      <stop offset="100%" stop-color="#261C0A"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#dunes)"/>
+  <!-- Stylized Low-Poly Desert Sun & Dunes -->
+  <circle cx="600" cy="290" r="135" fill="#F5B700" fill-opacity="0.18" stroke="#F5B700" stroke-width="2"/>
+  <circle cx="600" cy="290" r="95" fill="#F5B700" fill-opacity="0.85"/>
+  <polygon points="0,560 360,390 740,540 1200,370 1200,750 0,750" fill="#12131A" stroke="#F5B700" stroke-opacity="0.35" stroke-width="1.5"/>
+  <polygon points="0,620 480,460 880,580 1200,480 1200,750 0,750" fill="#0B0C10" stroke="#27272A" stroke-width="1.5"/>
+  <!-- Stylized Futuristic Rally Craft -->
+  <g transform="translate(510, 465)">
+    <polygon points="0,30 70,0 165,10 210,35 15,45" fill="#FAFAFA"/>
+    <polygon points="55,8 135,12 155,26 40,24" fill="#070709"/>
+    <polygon points="-25,26 15,22 5,38 -35,34" fill="#F5B700"/>
+  </g>
+  <text x="90" y="665" fill="#A1A1AA" font-family="monospace" font-size="15" letter-spacing="2">UNITY · MOBILE &amp; PC · STYLIZED PHYSICS</text>
+</svg>

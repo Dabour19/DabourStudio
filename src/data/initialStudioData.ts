@@ -1,0 +1,552 @@
+import { StudioDatabase } from '../types/studio';
+
+export const initialStudioData: StudioDatabase = {
+  hero: {
+    headline: {
+      ar: 'نحوّل أفكارك إلى واقع رقمي',
+      en: 'Turning Your Ideas into Digital Reality',
+    },
+    subheadline: {
+      ar: 'في دبور ستيديو، نصمم الألعاب ونطور البرمجيات ونبني تجارب رقمية تجمع بين الإبداع والتقنية.',
+      en: 'At DabourStudio, we design video games, engineer custom software, and build digital experiences that unite creative vision with technical precision.',
+    },
+    primaryCta: {
+      ar: 'استكشف مشاريعنا',
+      en: 'Explore Our Projects',
+    },
+    secondaryCta: {
+      ar: 'ابدأ مشروعك معنا',
+      en: 'Start Your Project With Us',
+    },
+    studioTagline: {
+      ar: 'استوديو تطوير ألعاب Unity 6 وهندسة البرمجيات المتقدمة',
+      en: 'Unity 6 Game Development & Custom Software Engineering Studio',
+    },
+  },
+  services: [
+    {
+      id: 'srv-games',
+      number: '01',
+      iconKey: 'gamepad',
+      title: {
+        ar: 'تطوير الألعاب',
+        en: 'Game Development',
+      },
+      shortDescription: {
+        ar: 'ألعاب ثنائية وثلاثية الأبعاد باستخدام Unity وUnity 6 لأجهزة الكمبيوتر والهواتف.',
+        en: '2D and 3D video games built with Unity and Unity 6 for PC and mobile platforms.',
+      },
+      detailedDescription: {
+        ar: 'نبني عوالم تفاعلية وأنظمة لعب متوازنة باستخدام محرك Unity وUnity 6، بدءًا من تصميم ميكانيكيات اللعب والفيزياء المخصصة، وصولًا إلى كتابة Shaders وضبط الأداء على مختلف المنصات.',
+        en: 'We architect interactive worlds and balanced gameplay systems using Unity and Unity 6, from core combat/movement mechanics and custom physics to HLSL shaders and frame-rate profiling across PC and mobile.',
+      },
+      deliverables: {
+        ar: [
+          'تطوير ألعاب 2D و3D متكاملة بمحرك Unity 6',
+          'بناء أنظمة الذكاء الاصطناعي للأعداء والشخصيات (FSM / Behavior Trees)',
+          'تحسين الأداء والذاكرة (Profiling & Draw Call Batching)',
+          'تصميم واجهات الألعاب التفاعلية وأنظمة الصوت والمؤثرات البصرية',
+        ],
+        en: [
+          'Full-cycle 2D & 3D game production in Unity 6 (URP / HDRP)',
+          'Tactical AI systems using Behavior Trees and State Machines',
+          'Memory management, GPU profiling, and draw-call optimization',
+          'Diegetic game UI/UX, audio integration, and VFX Graph pipelines',
+        ],
+      },
+      technologies: ['Unity 6', 'C#', 'URP / HDRP', 'Shader Graph', 'Netcode for GameObjects', 'DOTS'],
+    },
+    {
+      id: 'srv-mobile',
+      number: '02',
+      iconKey: 'smartphone',
+      title: {
+        ar: 'تطبيقات الهاتف',
+        en: 'Mobile Applications',
+      },
+      shortDescription: {
+        ar: 'تطبيقات Android وتجارب مستخدم عملية وسريعة الاستجابة.',
+        en: 'Native and cross-platform Android applications with practical, responsive user experiences.',
+      },
+      detailedDescription: {
+        ar: 'نطور تطبيقات Android حديثة تركز على سرعة الأداء وسهولة الاستخدام والعمل الموثوق، مع ربط سلس بواجهات البرمجة السحابية وقواعد البيانات المحلية.',
+        en: 'We engineer modern Android applications focused on startup speed, ergonomic navigation, offline resilience, and seamless synchronization with cloud APIs.',
+      },
+      deliverables: {
+        ar: [
+          'تطوير تطبيقات Android أصلية وهجينة عالية الأداء',
+          'تصميم واجهات تدعم العربية (RTL) والإنجليزية بسلاسة',
+          'دعم العمل دون اتصال ومزامنة البيانات الخلفية',
+          'اختبار التوافق على مختلف أحجام الشاشات والأجهزة',
+        ],
+        en: [
+          'High-performance Android application architecture',
+          'Bilingual RTL/LTR adaptive user interfaces',
+          'Offline-first local persistence and background cloud sync',
+          'Device matrix testing and battery/memory optimization',
+        ],
+      },
+      technologies: ['Android SDK', 'Kotlin', 'Jetpack Compose', 'REST / GraphQL', 'SQLite / Room'],
+    },
+    {
+      id: 'srv-software',
+      number: '03',
+      iconKey: 'cpu',
+      title: {
+        ar: 'تطوير البرمجيات',
+        en: 'Custom Software Engineering',
+      },
+      shortDescription: {
+        ar: 'أنظمة وأدوات مخصصة حسب احتياجات العملاء والمؤسسات.',
+        en: 'Tailored enterprise systems, desktop applications, and workflow tools built to specification.',
+      },
+      detailedDescription: {
+        ar: 'نحلل تحديات العمل التقنية ونصمم أنظمة برمجية مخصصة قابلة للتوسع، تشمل لوحات التحكم التشغيلية، أنظمة أتمتة العمليات، والواجهات الخلفية الآمنة.',
+        en: 'We analyze operational bottlenecks and engineer custom software platforms, including internal operations consoles, automated pipelines, and secure API backends.',
+      },
+      deliverables: {
+        ar: [
+          'هندسة أنظمة خلفية (Backends) وواجهات برمجية RESTful آمنة',
+          'تطوير برامج سطح المكتب وأدوات الإدارة الداخلية',
+          'تصميم قواعد البيانات وتحسين سرعة الاستعلامات',
+          'توثيق برمجي كامل واختبارات تكامل شاملة',
+        ],
+        en: [
+          'Secure backend microservices and RESTful API architecture',
+          'Desktop utilities and internal operational control panels',
+          'Relational and document database schema optimization',
+          'Comprehensive API documentation and automated integration tests',
+        ],
+      },
+      technologies: ['TypeScript', 'Node.js', 'C# / .NET', 'PostgreSQL', 'Docker', 'REST APIs'],
+    },
+    {
+      id: 'srv-web',
+      number: '04',
+      iconKey: 'globe',
+      title: {
+        ar: 'تطوير مواقع الويب',
+        en: 'Web Development',
+      },
+      shortDescription: {
+        ar: 'مواقع احترافية وتطبيقات ويب سريعة ومتجاوبة مع جميع الشاشات.',
+        en: 'Fast, responsive websites and full-stack web applications engineered for clarity and speed.',
+      },
+      detailedDescription: {
+        ar: 'نصمم ونبرمج مواقع شركات ومنصات ويب تفاعلية بمعايير أداء عالية، مع تهيئة محركات البحث (SEO)، توافق كامل مع الجوال، وهوية بصرية تعكس قيمة علامتك التجارية.',
+        en: 'We design and build corporate platforms and interactive web applications with strict Core Web Vitals discipline, technical SEO, and bespoke brand identities.',
+      },
+      deliverables: {
+        ar: [
+          'تطبيقات ويب حديثة باستخدام React وTypeScript',
+          'تهيئة متقدمة لمحركات البحث (SEO) وبيانات Open Graph',
+          'دعم كامل للغتين العربية (RTL) والإنجليزية (LTR)',
+          'لوحات تحكم ديناميكية لإدارة المحتوى والبيانات',
+        ],
+        en: [
+          'Modern single-page and full-stack web apps with React & TypeScript',
+          'Technical SEO, Schema.org structured data, and OpenGraph cards',
+          'Native-grade Arabic RTL and English LTR layout mirroring',
+          'Authenticated content management and analytics dashboards',
+        ],
+      },
+      technologies: ['React 19', 'TypeScript', 'Vite', 'Tailwind CSS', 'Express', 'SSR / SEO'],
+    },
+    {
+      id: 'srv-tools',
+      number: '05',
+      iconKey: 'sparkles',
+      title: {
+        ar: 'حلول تقنية مبتكرة',
+        en: 'Innovative Tech Solutions',
+      },
+      shortDescription: {
+        ar: 'أدوات برمجية وإضافات محركات ألعاب وأنظمة ذكية قابلة للتوسع.',
+        en: 'Custom game engine plugins, developer SDKs, and scalable smart automation tools.',
+      },
+      detailedDescription: {
+        ar: 'نبتكر أدوات مساعدة للمطورين وصناع المحتوى، مثل إضافات مخصصة لمحرك Unity (Editor Tools)، ومولدات المراحل الإجرائية، وأنظمة المحاكاة التفاعلية.',
+        en: 'We build specialized tools for development teams, including custom Unity Editor extensions, procedural level generators, and interactive simulation systems.',
+      },
+      deliverables: {
+        ar: [
+          'تطوير إضافات وأدوات مخصصة داخل محرر Unity (Custom Editor Tools)',
+          'أنظمة التوليد الإجرائي للمراحل والبيئات (Procedural Generation)',
+          'أتمتة بناء المشاريع واختبارها (CI/CD Pipelines)',
+          'استشارات تقنية ومراجعة معمارية للمشاريع القائمة',
+        ],
+        en: [
+          'Custom Unity Editor windows, inspectors, and asset pipelines',
+          'Procedural world and hexagonal grid generation algorithms',
+          'Automated build pipelines for multi-platform targets',
+          'Technical architecture audits and performance consulting',
+        ],
+      },
+      technologies: ['Unity Editor API', 'UI Toolkit', 'Procedural Algorithms', 'CI/CD', 'WebGL'],
+    },
+  ],
+  projects: [
+    {
+      id: 'prj-sector-vespula',
+      slug: 'sector-vespula-unity6',
+      category: 'games',
+      status: 'prototype',
+      isSamplePrototype: true,
+      featured: true,
+      coverImage: '/images/project-hornet-unity6.svg',
+      galleryImages: [
+        '/images/project-hornet-unity6.svg',
+        '/images/project-swarm-sdk.svg',
+      ],
+      title: {
+        ar: 'القطاع فيسبولا (Sector Vespula) — نموذج استعراضي',
+        en: 'Sector Vespula — Showcase Game Prototype',
+      },
+      shortDescription: {
+        ar: 'نموذج أولي تجريبي للعبة أكشن تكتيكية ثلاثية الأبعاد مطورة بمحرك Unity 6 لاستعراض قدرات الإضاءة والذكاء الاصطناعي.',
+        en: 'Experimental 3D tactical action prototype built in Unity 6 showcasing volumetric lighting, hexagonal arena cover, and swarm AI.',
+      },
+      fullDescription: {
+        ar: 'مشروع تجريبي استعراضي (Concept Prototype) تم بناؤه داخل دبور ستيديو لاستعراض إمكانيات محرك Unity 6 في الألعاب ثلاثية الأبعاد. يركز النموذج على حركة شخصية سلسة، نظام تصويب تكتيكي، وذكاء اصطناعي للأعداء يعتمد على شجرة السلوكيات (Behavior Trees) في بيئة مستقبلية سداسية الخلايا.',
+        en: 'An internal showcase concept prototype engineered at DabourStudio to demonstrate Unity 6 capabilities. It focuses on responsive character locomotion, tactical cover mechanics, and Behavior-Tree-driven autonomous drone units inside a modular hexagonal sci-fi arena.',
+      },
+      challenge: {
+        ar: 'تحقيق معدل إطارات ثابت (60+ FPS) مع إضاءة ديناميكية ومؤثرات جسيمات كثيفة دون استهلاك مفرط للذاكرة.',
+        en: 'Maintaining a locked 60+ FPS frame budget alongside dynamic volumetric lighting and dense GPU particle systems.',
+      },
+      architecture: {
+        ar: 'معمارية قائمة على ScriptableObjects لفصل البيانات عن المنطق البرمجي، مع استخدام GPU Instancing لرسم الوحدات المتكررة بكفاءة.',
+        en: 'Data-driven architecture utilizing ScriptableObjects for decoupled combat stats, paired with GPU Instancing and Object Pooling for zero-allocation combat loops.',
+      },
+      technologies: ['Unity 6', 'C#', 'Universal Render Pipeline (URP)', 'Shader Graph', 'Cinemachine'],
+      targetPlatforms: ['PC (Windows)', 'Console Concept'],
+      year: '2026',
+      metrics: [
+        {
+          label: { ar: 'معدل الإطارات المستهدف في النموذج', en: 'Target Prototype Frame Rate' },
+          value: '60 FPS',
+        },
+        {
+          label: { ar: 'زمن استجابة حلقة الذكاء الاصطناعي', en: 'AI Decision Tick Time' },
+          value: '1.2 ms',
+        },
+        {
+          label: { ar: 'توفير استدعاءات الرسم (Draw Calls)', en: 'Draw Call Reduction via Batching' },
+          value: '68%',
+        },
+      ],
+      milestones: [
+        {
+          phase: { ar: 'بناء نظام الحركة والفيزياء الأساسي', en: 'Core Locomotion & Physics Controller' },
+          detail: { ar: 'تصميم نظام تحكم يستجيب خلال أقل من 16 مللي ثانية', en: 'Sub-16ms input-to-motion character controller' },
+          completed: true,
+        },
+        {
+          phase: { ar: 'برمجة الذكاء الاصطناعي للسرب', en: 'Swarm Tactical AI Behavior Tree' },
+          detail: { ar: 'تنسيق حركة الوحدات الهجومية والدفاعية في الساحة', en: 'Coordinated flanking and cover-seeking routines' },
+          completed: true,
+        },
+        {
+          phase: { ar: 'تصميم Shaders الإضاءة السداسية', en: 'Hexagonal Energy Shield Shaders' },
+          detail: { ar: 'مؤثرات بصرية تفاعلية عند الاصطدام باستخدام Shader Graph', en: 'Procedural impact ripples built with Unity Shader Graph' },
+          completed: true,
+        },
+      ],
+    },
+    {
+      id: 'prj-hivepulse-android',
+      slug: 'hivepulse-field-android',
+      category: 'apps',
+      status: 'completed_concept',
+      isSamplePrototype: true,
+      featured: true,
+      coverImage: '/images/project-hive-android.svg',
+      galleryImages: [
+        '/images/project-hive-android.svg',
+        '/images/project-atlas-erp.svg',
+      ],
+      title: {
+        ar: 'هايف بالس (HivePulse) — نموذج تطبيق Android',
+        en: 'HivePulse Field — Android Concept App',
+      },
+      shortDescription: {
+        ar: 'نموذج تجريبي لتطبيق Android مخصص لإدارة الفرق الميدانية وتتبع المهام الفورية مع دعم العمل دون اتصال.',
+        en: 'Showcase Android application prototype for field team coordination, real-time task telemetry, and offline-first syncing.',
+      },
+      fullDescription: {
+        ar: 'نموذج تطبيقي استعراضي يوضح منهجية دبور ستيديو في بناء تطبيقات Android العصرية. يوفر التطبيق واجهة داكنة مريحة للعين في البيئات الميدانية، مع تخزين محلي فوري ومزامنة تلقائية عند عودة الاتصال بالشبكة.',
+        en: 'A showcase Android prototype illustrating DabourStudio’s approach to mobile engineering. Designed with a high-contrast dark interface for field legibility, local SQLite caching, and deterministic conflict resolution when connectivity is restored.',
+      },
+      challenge: {
+        ar: 'ضمان عدم فقدان أي بيانات يدخلها الفريق الميداني أثناء انقطاع تغطية الشبكة.',
+        en: 'Ensuring zero data loss during intermittent cellular connectivity while keeping battery consumption minimal.',
+      },
+      architecture: {
+        ar: 'نمط MVVM مع طبقة Repository موحدة تفصل بين قاعدة البيانات المحلية (Room) وواجهة البرمجة السحابية.',
+        en: 'Clean MVVM architecture with a unified Repository layer mediating between local Room persistence and background WorkManager sync queues.',
+      },
+      technologies: ['Kotlin', 'Jetpack Compose', 'Android SDK', 'Room DB', 'Coroutines'],
+      targetPlatforms: ['Android 11+'],
+      year: '2026',
+      metrics: [
+        {
+          label: { ar: 'زمن فتح التطبيق (Cold Start)', en: 'Cold Start Launch Time' },
+          value: '420 ms',
+        },
+        {
+          label: { ar: 'دعم العمل دون إنترنت', en: 'Offline Queue Reliability' },
+          value: '100%',
+        },
+        {
+          label: { ar: 'حجم الحزمة المبدئي', en: 'Optimized APK Footprint' },
+          value: '11.4 MB',
+        },
+      ],
+      milestones: [
+        {
+          phase: { ar: 'تصميم نظام الواجهات المتجاوب RTL/LTR', en: 'Bilingual RTL/LTR Compose Design System' },
+          detail: { ar: 'مكونات واجهة مخصصة بوضوح عالٍ وسهولة وصول', en: 'Custom high-contrast components meeting WCAG AA standards' },
+          completed: true,
+        },
+        {
+          phase: { ar: 'محرك المزامنة الخلفية', en: 'Offline-First Sync Engine' },
+          detail: { ar: 'جدولة المهام الذكية عند توفر الشبكة', en: 'Automated delta synchronization via WorkManager' },
+          completed: true,
+        },
+      ],
+    },
+    {
+      id: 'prj-qafilah-web',
+      slug: 'qafilah-cloud-platform',
+      category: 'web',
+      status: 'completed_concept',
+      isSamplePrototype: true,
+      featured: true,
+      coverImage: '/images/project-nexus-web.svg',
+      galleryImages: [
+        '/images/project-nexus-web.svg',
+        '/images/project-atlas-erp.svg',
+      ],
+      title: {
+        ar: 'منصة قافلة السحابية (Qafilah Cloud) — نموذج ويب',
+        en: 'Qafilah Cloud — Web Platform Prototype',
+      },
+      shortDescription: {
+        ar: 'نموذج تجريبي لمنصة ويب تفاعلية لمراقبة العمليات والبيانات اللحظية بتصميم ثنائي اللغة عالي الأداء.',
+        en: 'Interactive web platform concept for real-time operations monitoring and bilingual analytics dashboards.',
+      },
+      fullDescription: {
+        ar: 'مشروع ويب تجريبي يستعرض قدرات دبور ستيديو في هندسة تطبيقات الويب الحديثة (Full-Stack Web Apps). يجمع المشروع بين سرعة التحميل الفائقة، الرسوم البيانية التفاعلية، وتجربة مستخدم عربية وإنجليزية متكاملة.',
+        en: 'A full-stack web platform concept demonstrating DabourStudio’s web engineering standards. It combines sub-second page transitions, SVG data visualization, and native-grade Arabic RTL and English LTR ergonomics.',
+      },
+      challenge: {
+        ar: 'عرض جداول ومؤشرات بيانات كثيفة على شاشات المكتب والجوال دون تراجع في سرعة التصفح.',
+        en: 'Rendering dense operational metrics across desktop and mobile viewports without layout shift or main-thread blocking.',
+      },
+      architecture: {
+        ar: 'واجهة React 19 مبنية بمكونات معيارية مع خادم Express.js سريع وواجهة REST API منظمة.',
+        en: 'Modular React 19 + TypeScript frontend paired with an Express API layer and structured JSON schema validation.',
+      },
+      technologies: ['React 19', 'TypeScript', 'Tailwind CSS', 'Node.js', 'Express'],
+      targetPlatforms: ['Web (Desktop & Mobile)', 'PWA Ready'],
+      year: '2026',
+      metrics: [
+        {
+          label: { ar: 'أداء الواجهة (Lighthouse Score)', en: 'Performance Benchmark' },
+          value: '99 / 100',
+        },
+        {
+          label: { ar: 'زمن تفاعل الواجهة', en: 'First Input Delay' },
+          value: '< 16 ms',
+        },
+        {
+          label: { ar: 'دعم اللغات والاتجاه', en: 'Bilingual Layout Parity' },
+          value: 'AR / EN',
+        },
+      ],
+      milestones: [
+        {
+          phase: { ar: 'هندسة نظام المكونات والرسوم البيانية', en: 'Zero-Dependency SVG Charting Engine' },
+          detail: { ar: 'رسوم بيانية خفيفة وسريعة دون مكتبات ثقيلة', en: 'Lightweight vector charts with tabular numeral alignment' },
+          completed: true,
+        },
+        {
+          phase: { ar: 'بناء واجهة البرمجة الخلفية', en: 'REST API & Role Security Layer' },
+          detail: { ar: 'حماية المسارات والتحقق الصارم من المدخلات', en: 'Token-authenticated endpoints and payload sanitization' },
+          completed: true,
+        },
+      ],
+    },
+    {
+      id: 'prj-dabour-hex-sdk',
+      slug: 'dabour-hexgrid-unity-sdk',
+      category: 'tools',
+      status: 'prototype',
+      isSamplePrototype: true,
+      featured: true,
+      coverImage: '/images/project-swarm-sdk.svg',
+      galleryImages: [
+        '/images/project-swarm-sdk.svg',
+        '/images/project-hornet-unity6.svg',
+      ],
+      title: {
+        ar: 'حزمة DabourHex SDK — أداة لمطوري Unity',
+        en: 'DabourHex SDK — Unity Editor Toolkit Concept',
+      },
+      shortDescription: {
+        ar: 'أداة برمجية تجريبية داخل محرر Unity لتوليد الخرائط السداسية الإجرائية وحساب مسارات الحركة (A* Pathfinding).',
+        en: 'Experimental Unity Editor toolkit for procedural hexagonal map generation and A* tactical pathfinding.',
+      },
+      fullDescription: {
+        ar: 'نموذج لأداة تطوير داخلية (Developer Tool) صُممت لتسريع بناء ألعاب الاستراتيجيا والألغاز في Unity. تتيح للمصمم إنشاء شبكات سداسية ثلاثية الأبعاد بضغطة زر، مع تخصيص الارتفاعات والعوائق وحساب أقصر المسارات لحظيًا.',
+        en: 'An internal developer tool concept designed to accelerate strategy and tactical game production in Unity. It enables level designers to paint 3D hexagonal terrains directly inside the Scene View with instant A* navigation baking.',
+      },
+      challenge: {
+        ar: 'تمكين مصممي المراحل من تعديل آلاف الخلايا السداسية داخل محرر Unity بشكل لحظي ودون بطء.',
+        en: 'Allowing level designers to manipulate thousands of hexagonal cells in the Unity Scene View with zero editor lag.',
+      },
+      architecture: {
+        ar: 'مبنية باستخدام Unity UI Toolkit ونظام الإحداثيات المكعبة (Axial & Cube Coordinates) لضمان دقة الحسابات الهندسية.',
+        en: 'Built on Unity UI Toolkit and Cube Coordinate math structures with chunked mesh serialization.',
+      },
+      technologies: ['C#', 'Unity Editor API', 'UI Toolkit', 'A* Pathfinding', 'Mesh Generation'],
+      targetPlatforms: ['Unity 2022 LTS', 'Unity 6'],
+      year: '2026',
+      metrics: [
+        {
+          label: { ar: 'سرعة توليد خريطة 10,000 خلية', en: '10k Hex Cell Generation Time' },
+          value: '38 ms',
+        },
+        {
+          label: { ar: 'حساب المسار التكتيكي (Pathfinding)', en: 'A* Path Query Latency' },
+          value: '0.4 ms',
+        },
+        {
+          label: { ar: 'توفير وقت تصميم المراحل', en: 'Level Design Workflow Speedup' },
+          value: '4.5x',
+        },
+      ],
+      milestones: [
+        {
+          phase: { ar: 'محرك الرياضيات السداسية (Cube Math)', en: 'Axial & Cube Coordinate Math Core' },
+          detail: { ar: 'دعم حساب الجيران، المسافات، وخط الرؤية (Line of Sight)', en: 'Neighbors, ring radius, and raycast line-of-sight solvers' },
+          completed: true,
+        },
+        {
+          phase: { ar: 'واجهة محرر مخصصة (Custom Inspector)', en: 'Scene View Brush & Custom Inspector' },
+          detail: { ar: 'فرشاة تفاعلية لتلوين التضاريس وتحديد مناطق اللعب', en: 'Interactive terrain elevation and biome brush tools' },
+          completed: true,
+        },
+      ],
+    },
+    {
+      id: 'prj-rimal-velocity',
+      slug: 'rimal-velocity-arcade',
+      category: 'games',
+      status: 'in_development',
+      isSamplePrototype: true,
+      featured: false,
+      coverImage: '/images/project-desert-drift.svg',
+      galleryImages: ['/images/project-desert-drift.svg'],
+      title: {
+        ar: 'رمال فيلوسيتي (Rimal Velocity) — نموذج لعبة سباق',
+        en: 'Rimal Velocity — Stylized Arcade Racing Concept',
+      },
+      shortDescription: {
+        ar: 'نموذج تجريبي للعبة مركبات مستقبلية عبر الكثبان الرملية بفيزياء تعليق مخصصة للهواتف والكمبيوتر.',
+        en: 'Stylized desert hover-rally game concept featuring custom raycast vehicle suspension physics for mobile and PC.',
+      },
+      fullDescription: {
+        ar: 'مشروع استعراضي يختبر بناء فيزياء مركبات خفيفة وممتعة (Arcade Raycast Physics) تعمل بكفاءة عالية على الهواتف الذكية وأجهزة الكمبيوتر، مع بيئات صحراوية منخفضة المضلعات وإضاءة ديناميكية.',
+        en: 'A game physics showcase testing custom raycast hover-and-wheel suspension mechanics engineered to run at 60 FPS on mid-range Android devices and desktop platforms.',
+      },
+      challenge: {
+        ar: 'الموازنة بين واقعية فيزياء المركبات على المنحدرات الرملية وسهولة التحكم باللمس على الهواتف.',
+        en: 'Balancing believable dune suspension physics with responsive touch and gamepad controls.',
+      },
+      architecture: {
+        ar: 'نظام فيزياء مبني على Raycasts متعددة لكل مركبة مع معالجة مستقلة عن معدل الإطارات في FixedUpdate.',
+        en: 'Deterministic FixedUpdate raycast suspension solver paired with custom sand-trail particle emitters.',
+      },
+      technologies: ['Unity 6', 'C#', 'Custom Physics', 'Mobile Optimization', 'Shader Graph'],
+      targetPlatforms: ['Android', 'PC'],
+      year: '2026',
+      metrics: [
+        {
+          label: { ar: 'تردد محاكاة الفيزياء', en: 'Physics Simulation Rate' },
+          value: '120 Hz',
+        },
+        {
+          label: { ar: 'استهلاك المعالج على الهواتف المتوسطة', en: 'Mid-Range Mobile CPU Frame Time' },
+          value: '6.8 ms',
+        },
+        {
+          label: { ar: 'عدد المركبات المتزامنة في السباق', en: 'Concurrent AI Racers' },
+          value: '12',
+        },
+      ],
+      milestones: [
+        {
+          phase: { ar: 'برمجة نظام التعليق والانزلاق (Drift)', en: 'Raycast Suspension & Drift Physics' },
+          detail: { ar: 'استجابة فورية للتوجيه مع حفظ التوازن الهوائي', en: 'Tunable grip curves and airborne stabilization' },
+          completed: true,
+        },
+      ],
+    },
+    {
+      id: 'prj-mizan-core',
+      slug: 'mizan-core-automation',
+      category: 'tools',
+      status: 'completed_concept',
+      isSamplePrototype: true,
+      featured: false,
+      coverImage: '/images/project-atlas-erp.svg',
+      galleryImages: ['/images/project-atlas-erp.svg'],
+      title: {
+        ar: 'نواة ميزان (Mizan Core) — نظام أتمتة برمجية',
+        en: 'Mizan Core — Workflow & API Automation Concept',
+      },
+      shortDescription: {
+        ar: 'نموذج تجريبي لنظام برمجي مخصص لأتمتة فحص البيانات وجدولة المهام الخلفية للمؤسسات التقنية.',
+        en: 'Custom software system prototype for automated schema verification, task scheduling, and audit logging.',
+      },
+      fullDescription: {
+        ar: 'نموذج لبرمجية مؤسسية مخصصة توضح قدرة دبور ستيديو على بناء الأدوات والأنظمة الذكية التي تربط قواعد البيانات المتعددة وتتحقق من سلامة العمليات آليًا.',
+        en: 'A custom software prototype showcasing DabourStudio’s capability to build smart operational tools that validate data pipelines, schedule background jobs, and provide real-time audit logs.',
+      },
+      challenge: {
+        ar: 'معالجة آلاف السجلات والتحقق من صحتها دون التأثير على سرعة النظام الرئيسي.',
+        en: 'Processing and validating thousands of batch records asynchronously without impacting primary API latency.',
+      },
+      architecture: {
+        ar: 'محرك معالجة غير متزامن (Worker Queue) مع سجل أحداث غير قابل للتلاعب وواجهة مراقبة فورية.',
+        en: 'Asynchronous worker queue architecture with structured JSON schema validation and immutable audit logs.',
+      },
+      technologies: ['TypeScript', 'Node.js', 'REST API', 'JSON Schema', 'Automated Testing'],
+      targetPlatforms: ['Linux Server', 'Docker', 'Web Console'],
+      year: '2026',
+      metrics: [
+        {
+          label: { ar: 'سرعة فحص السجلات', en: 'Batch Validation Throughput' },
+          value: '15k / sec',
+        },
+        {
+          label: { ar: 'زمن الاستجابة المتوسط', en: 'Median API Response Time' },
+          value: '18 ms',
+        },
+        {
+          label: { ar: 'دقة اكتشاف الأخطاء', en: 'Schema Validation Accuracy' },
+          value: '100%',
+        },
+      ],
+      milestones: [
+        {
+          phase: { ar: 'بناء محرك القواعد والتحقق', en: 'Rule & Schema Validation Engine' },
+          detail: { ar: 'فحص فوري لهياكل البيانات قبل التخزين', en: 'Strict runtime payload verification and error reporting' },
+          completed: true,
+        },
+      ],
+    },
+  ],
+  contacts: [],
+};

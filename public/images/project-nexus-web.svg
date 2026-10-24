@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" fill="none">
+  <rect width="1200" height="750" fill="#08090D"/>
+  <!-- Architectural Browser Frame -->
+  <rect x="110" y="85" width="980" height="580" rx="20" fill="#11131A" stroke="#27272A" stroke-width="2"/>
+  <line x1="110" y1="140" x2="1090" y2="140" stroke="#27272A" stroke-width="1.5"/>
+  <circle cx="145" cy="112" r="6" fill="#3F3F46"/>
+  <circle cx="167" cy="112" r="6" fill="#3F3F46"/>
+  <circle cx="189" cy="112" r="6" fill="#F5B700"/>
+  <rect x="440" y="98" width="320" height="28" rx="8" fill="#090A0E" stroke="#27272A"/>
+  <!-- Dashboard Grid Inside Browser -->
+  <rect x="145" y="175" width="210" height="450" rx="12" fill="#0B0C11" stroke="#1F222D"/>
+  <rect x="170" y="205" width="120" height="12" rx="6" fill="#F5B700"/>
+  <rect x="170" y="245" width="150" height="10" rx="5" fill="#52525B"/>
+  <rect x="170" y="275" width="135" height="10" rx="5" fill="#3F3F46"/>
+  <rect x="170" y="305" width="145" height="10" rx="5" fill="#3F3F46"/>
+
+  <!-- Main Workspace Area -->
+  <rect x="380" y="175" width="675" height="210" rx="12" fill="#151822" stroke="#27272A"/>
+  <!-- Telemetry Wave -->
+  <path d="M415 330 C480 290, 520 345, 590 265 C660 185, 730 295, 810 235 C890 175, 950 245, 1020 195" stroke="#F5B700" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M415 350 C490 320, 560 355, 640 310 C720 265, 810 325, 890 285 C960 250, 990 275, 1020 255" stroke="#FAFAFA" stroke-opacity="0.35" stroke-width="2" fill="none"/>
+
+  <!-- Bottom Split Cards -->
+  <rect x="380" y="410" width="325" height="215" rx="12" fill="#151822" stroke="#27272A"/>
+  <rect x="410" y="440" width="120" height="12" rx="6" fill="#FAFAFA"/>
+  <text x="410" y="520" fill="#F5B700" font-family="monospace" font-weight="700" font-size="44">99.94%</text>
+  <text x="410" y="555" fill="#A1A1AA" font-family="monospace" font-size="14">REALTIME TELEMETRY SYNC</text>
+
+  <rect x="730" y="410" width="325" height="215" rx="12" fill="#151822" stroke="#F5B700" stroke-opacity="0.45"/>
+  <rect x="760" y="440" width="140" height="12" rx="6" fill="#F5B700"/>
+  <text x="760" y="520" fill="#FAFAFA" font-family="monospace" font-weight="700" font-size="44">14.2 ms</text>
+  <text x="760" y="555" fill="#A1A1AA" font-family="monospace" font-size="14">EDGE DISPATCH LATENCY</text>
+</svg>
