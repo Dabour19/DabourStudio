@@ -81,11 +81,11 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ slug, onNa
         </div>
 
         <h1 className="text-3xl sm:text-5xl font-bold text-white tracking-tight text-balance">
-          {project.title[lang]}
+          {project.title?.[lang]}
         </h1>
 
         <p className="text-base sm:text-lg text-zinc-300 max-w-3xl leading-relaxed">
-          {project.shortDescription[lang]}
+          {project.shortDescription?.[lang]}
         </p>
       </div>
 
@@ -96,8 +96,8 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ slug, onNa
           <div className="aspect-[16/10] w-full rounded-2xl overflow-hidden bg-[#0A0B10] border border-white/10">
             <ResilientImage
               src={currentImage}
-              alt={project.title[lang]}
-              fallbackLabel={project.title[lang]}
+              alt={project.title?.[lang] || project.title?.ar || ''}
+              fallbackLabel={project.title?.[lang] || project.title?.ar || ''}
               className="w-full h-full object-cover"
             />
           </div>
@@ -115,7 +115,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ slug, onNa
                 >
                   <ResilientImage
                     src={imgUrl}
-                    alt={`${project.title[lang]} view ${idx + 1}`}
+                    alt={`${project.title?.[lang] || ''} view ${idx + 1}`}
                     className="w-full h-full object-cover"
                   />
                 </button>
@@ -141,7 +141,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ slug, onNa
                   key={idx}
                   className="bg-[#0A0B0F] border border-white/10 rounded-xl p-4 flex items-center justify-between gap-4"
                 >
-                  <span className="text-xs text-zinc-400">{m.label[lang]}</span>
+                  <span className="text-xs text-zinc-400">{m.label?.[lang] || m.label?.ar || ''}</span>
                   <span className="text-base font-bold text-[#F5B700] font-mono-tabular">
                     {m.value}
                   </span>
@@ -202,7 +202,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ slug, onNa
           <h3 className="text-lg font-bold text-white">
             {lang === 'ar' ? 'نظرة شاملة على المشروع' : 'Project Overview'}
           </h3>
-          <p className="text-sm text-zinc-300 leading-relaxed">{project.fullDescription[lang]}</p>
+          <p className="text-sm text-zinc-300 leading-relaxed">{project.fullDescription?.[lang]}</p>
         </div>
 
         <div className="bg-[#101218] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-3">
@@ -210,7 +210,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ slug, onNa
           <h3 className="text-lg font-bold text-white">
             {lang === 'ar' ? 'التحدي الهندسي والأداء' : 'Engineering Challenge'}
           </h3>
-          <p className="text-sm text-zinc-300 leading-relaxed">{project.challenge[lang]}</p>
+          <p className="text-sm text-zinc-300 leading-relaxed">{project.challenge?.[lang]}</p>
         </div>
 
         <div className="bg-[#101218] border border-white/10 rounded-2xl p-6 sm:p-8 space-y-3">
@@ -218,7 +218,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ slug, onNa
           <h3 className="text-lg font-bold text-white">
             {lang === 'ar' ? 'المعمارية البرمجية المعتمدة' : 'System Architecture'}
           </h3>
-          <p className="text-sm text-zinc-300 leading-relaxed">{project.architecture[lang]}</p>
+          <p className="text-sm text-zinc-300 leading-relaxed">{project.architecture?.[lang]}</p>
         </div>
       </div>
 
@@ -242,8 +242,8 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ slug, onNa
                   <span>PHASE 0{idx + 1}</span>
                   <CheckCircle2 className="w-4 h-4 text-[#F5B700]" />
                 </div>
-                <h4 className="text-sm font-bold text-white">{ms.phase[lang]}</h4>
-                <p className="text-xs text-zinc-400 leading-relaxed">{ms.detail[lang]}</p>
+                <h4 className="text-sm font-bold text-white">{ms.phase?.[lang] || ms.phase?.ar || ''}</h4>
+                <p className="text-xs text-zinc-400 leading-relaxed">{ms.detail?.[lang] || ms.detail?.ar || ''}</p>
               </div>
             ))}
           </div>

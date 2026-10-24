@@ -659,9 +659,9 @@ export const AdminPage: React.FC = () => {
                         : 'Verified Production'}
                     </span>
                   </div>
-                  <h3 className="text-base font-bold text-white">{p.title[lang]}</h3>
+                  <h3 className="text-base font-bold text-white">{p.title?.[lang] || p.title?.ar || p.slug}</h3>
                   <p className="text-xs text-zinc-400 line-clamp-1">
-                    {p.shortDescription[lang]}
+                    {p.shortDescription?.[lang] || p.shortDescription?.ar || ''}
                   </p>
                 </div>
 

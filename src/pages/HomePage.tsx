@@ -51,15 +51,15 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
             {/* Typographic Column */}
             <div className="lg:col-span-6 flex flex-col justify-center space-y-6">
               <div className="text-xs sm:text-sm font-medium text-[#F5B700]">
-                {hero.studioTagline[lang]}
+                {hero?.studioTagline?.[lang]}
               </div>
 
               <h1 className="text-3xl sm:text-5xl lg:text-[54px] font-bold tracking-tight text-white leading-[1.15] text-balance">
-                {hero.headline[lang]}
+                {hero?.headline?.[lang]}
               </h1>
 
               <p className="text-base sm:text-lg text-zinc-300 leading-relaxed max-w-xl">
-                {hero.subheadline[lang]}
+                {hero?.subheadline?.[lang]}
               </p>
 
               {/* Hero CTAs */}
@@ -69,7 +69,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                   onClick={() => onNavigate('/projects')}
                   className="px-6 py-3.5 text-sm font-semibold text-[#070709] bg-[#F5B700] hover:bg-[#ffc414] rounded-xl transition-colors inline-flex items-center gap-2 whitespace-nowrap shrink-0 cursor-pointer"
                 >
-                  <span>{hero.primaryCta[lang]}</span>
+                  <span>{hero?.primaryCta?.[lang] || (lang === 'ar' ? 'استكشف مشاريعنا' : 'Explore Our Projects')}</span>
                   {isRtl ? <ArrowLeft className="w-4 h-4" /> : <ArrowRight className="w-4 h-4" />}
                 </button>
 
@@ -78,7 +78,7 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                   onClick={() => onNavigate('/contact')}
                   className="px-6 py-3.5 text-sm font-semibold text-white bg-[#13151D] hover:bg-[#1C1F2B] border border-white/15 rounded-xl transition-colors whitespace-nowrap shrink-0 cursor-pointer"
                 >
-                  {hero.secondaryCta[lang]}
+                  {hero?.secondaryCta?.[lang] || (lang === 'ar' ? 'ابدأ مشروعك معنا' : 'Start Your Project With Us')}
                 </button>
               </div>
 
@@ -186,16 +186,16 @@ export const HomePage: React.FC<HomePageProps> = ({ onNavigate }) => {
                   </div>
 
                   <h3 className="text-xl font-bold text-white group-hover:text-[#F5B700] transition-colors">
-                    {service.number}. {service.title[lang]}
+                    {service.number}. {service?.title?.[lang] || service?.title?.ar || ''}
                   </h3>
 
                   <p className="text-sm text-zinc-300 leading-relaxed">
-                    {service.shortDescription[lang]}
+                    {service?.shortDescription?.[lang] || service?.shortDescription?.ar || ''}
                   </p>
 
                   {isMarquee && (
                     <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed pt-1">
-                      {service.detailedDescription[lang]}
+                      {service?.detailedDescription?.[lang] || service?.detailedDescription?.ar || ''}
                     </p>
                   )}
                 </div>

@@ -49,9 +49,8 @@ const AppRouter: React.FC = () => {
     } else if (currentPath.startsWith('/projects/')) {
       const slug = currentPath.replace('/projects/', '');
       const found = projects.find((p) => p.slug === slug);
-      document.title = found
-        ? `${found.title[lang]} — ${brand}`
-        : `${brand}`;
+      const projTitle = found?.title?.[lang] || found?.title?.ar || slug;
+      document.title = `${projTitle} — ${brand}`;
     } else if (currentPath === '/about') {
       document.title =
         lang === 'ar' ? `من نحن — ${brand}` : `About Us — ${brand}`;

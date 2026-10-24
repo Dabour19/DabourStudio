@@ -21,12 +21,18 @@ export const ProjectsPage: React.FC<ProjectsPageProps> = ({ onNavigate }) => {
 
       if (!searchQuery.trim()) return true;
       const q = searchQuery.toLowerCase();
+      const titleAr = project.title?.ar?.toLowerCase() || '';
+      const titleEn = project.title?.en?.toLowerCase() || '';
+      const descAr = project.shortDescription?.ar?.toLowerCase() || '';
+      const descEn = project.shortDescription?.en?.toLowerCase() || '';
+      const techs = Array.isArray(project.technologies) ? project.technologies : [];
+
       return (
-        project.title.ar.toLowerCase().includes(q) ||
-        project.title.en.toLowerCase().includes(q) ||
-        project.shortDescription.ar.toLowerCase().includes(q) ||
-        project.shortDescription.en.toLowerCase().includes(q) ||
-        project.technologies.some((tech) => tech.toLowerCase().includes(q))
+        titleAr.includes(q) ||
+        titleEn.includes(q) ||
+        descAr.includes(q) ||
+        descEn.includes(q) ||
+        techs.some((tech) => String(tech).toLowerCase().includes(q))
       );
     });
   }, [projects, selectedCategory, searchQuery]);

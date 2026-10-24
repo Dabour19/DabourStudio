@@ -106,10 +106,10 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
                 </span>
               </div>
 
-              <h2 className="text-2xl font-bold text-white">{service.title[lang]}</h2>
+              <h2 className="text-2xl font-bold text-white">{service?.title?.[lang] || service?.title?.ar || ''}</h2>
 
               <p className="text-sm sm:text-base text-zinc-300 leading-relaxed">
-                {service.detailedDescription[lang]}
+                {service?.detailedDescription?.[lang] || service?.detailedDescription?.ar || ''}
               </p>
 
               <div className="pt-2 space-y-1.5">
@@ -117,7 +117,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
                   {t.servicesSection.techStackLabel}
                 </div>
                 <div className="flex flex-wrap items-center gap-2 text-xs font-mono-tabular text-[#F5B700]">
-                  {service.technologies.map((tech, idx) => (
+                  {(service.technologies || []).map((tech, idx) => (
                     <React.Fragment key={tech}>
                       {idx > 0 && <span className="text-zinc-600">·</span>}
                       <span>{tech}</span>
@@ -134,7 +134,7 @@ export const ServicesPage: React.FC<ServicesPageProps> = ({ onNavigate }) => {
               </h3>
 
               <ul className="space-y-3">
-                {service.deliverables[lang].map((item, idx) => (
+                {(service?.deliverables?.[lang] || service?.deliverables?.ar || []).map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-sm text-zinc-300">
                     <Check className="w-4 h-4 text-[#F5B700] shrink-0 mt-1" />
                     <span>{item}</span>

@@ -65,11 +65,11 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           </div>
 
           <h3 className="text-lg sm:text-xl font-bold text-white group-hover:text-[#F5B700] transition-colors">
-            {project.title[lang]}
+            {project.title?.[lang]}
           </h3>
 
           <p className="text-sm text-zinc-400 leading-relaxed line-clamp-2">
-            {project.shortDescription[lang]}
+            {project.shortDescription?.[lang]}
           </p>
         </div>
       </div>
