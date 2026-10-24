@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "dabourstudio",
+  "main": "worker/index.ts",
+  "compatibility_date": "2026-10-19",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application"
+  },
+  "observability": {
+    "enabled": true
+  },
+  "kv_namespaces": [
+    {
+      "binding": "STUDIO_KV",
+      "id": "f2a88e940d934ef48a6edb27f8a7e281"
+    }
+  ],
+  "routes": [{ "pattern": "dabourstudio.dev", "custom_domain": true }],
+  "vars": {
+    "STUDIO_ADMIN_PASSWORD": "dabour-admin-2026"
+  }
+}
